@@ -4,7 +4,7 @@ Frequently Asked Questions
 
 * http://php.net/manual/en/language.basic-syntax.php
 * http://php.net/manual/en/tutorial.php
-* http://it-ebooks.info/tag/php/
+* http://net.tutsplus.com/category/tutorials/php/
 
 ## Which resources are considered dangerous or outdated and MUST NOT be consulted or recommended.
 
@@ -15,6 +15,7 @@ Frequently Asked Questions
 ## I have many years of experience using PHP and I want to get ahead of the new technologies. Which resources can help me on that?
 
 * http://net.tutsplus.com/category/tutorials/php/
+* http://it-ebooks.info/tag/php/
 * http://www.phptherightway.com/
 
 ## Which resources can help me to start learning OOP PHP (Object Oriented PHP)
