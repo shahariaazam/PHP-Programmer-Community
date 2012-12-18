@@ -14,6 +14,7 @@ Frequently Asked Questions
 ## I have many years of experience using PHP and I want to get ahead of the new technologies. Which resources can help me on that?
 
 ## Which resources can help me to start learning OOP PHP (Object Oriented PHP)
+* http://php.net/manual/en/language.oop5.php
 
 ## What is PSR and why is it important?
 
