@@ -57,7 +57,9 @@ There is not a coding style better han other one and not a single person knows w
 Making a project PSR compliant help to make it easier to operate with other projects, that developers can help you better and to keep an organized structure in your code.
 
 ## Which is the best framework (or better said why I must not ask that question)
+It depends on the work you want to accomplish. There are lots of PHP Framework around the web. Just read http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks#PHP_2 and think what should be fit for your project. Choosing framework is totally dependent on your project types. So you know better what fits for you.
 
 ## I have experience programming in other language, what is different in PHP?
 
 ## I would like to contribute to opensource projects, where do I start?
+First of all you have to go to your chosen project's homepage and found their GIT repo. Then fork it. You can get started by taking a look at http://www.github.com . You will found lots of open source projects there. Just click on there and start Fork-ing.
