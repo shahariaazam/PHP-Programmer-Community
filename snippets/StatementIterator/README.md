@@ -26,16 +26,128 @@ So in resume this way will not leak that much memory since the statement will be
 
 We will use PHP5.3, `PDOStatements` and the `Iterator` interface
 
-### Constructor
+### The View
+
+```PHP
+foreach($iterator as $key => $value){
+    echo 'Returned field ', $value['field'],
+        'Is in the position ', $key;
+}
+
+```
+
+This code is very generic and its meant to be written with an array in mind and we will try to use that same code for our iterator.
+
+### Constructor method
 
 ```PHP
 <?php
 
-class StatementIterator implements iterator{
-    protected $statement;
+class StatementIterator implements Iterator{
+    protected $statement, $key = 0, $value;
 
-    public function __construct(PDOStatement $statement){
+    public function __construct(\PDOStatement $statement){
         $this->statement = $statement;
     }
 }
 ```
+
+Notice the ` \ ` before the PDOStatement classes to avoid namespaces conflicts.
+
+### Rewind method
+
+The rewind method is executed when the foreach starts.
+
+```PHP
+    public function rewind(){
+        $this->key = 0;
+        if ($this->statement->execute())
+            $this->value = $this->statement->fetch();
+        }
+    }
+```
+
+Due to how rewind is handled we can't use add parameter statement execute method.
+
+We also can't add a validation on the rewind method as we normally would (by returning false on error) since the return rewind method is meant to return void (`foreach` won't check it). To solve this we can implement two solutions.
+
+#### Store the execution response 
+
+```PHP
+    public function rewind(){
+        $this->key = 0;
+        if ($this->statement->execute()) {
+            $this->value = $this->statement->fetch();
+        } else {
+            $this->value = false;
+        }
+    }
+```
+
+The `$value` property will store the response and show it when the `foreach` ask the validation.
+
+The sql error won't get catched, it will go silently ignored by the `foreach`.
+
+#### Throw and exception
+
+```PHP
+    public function rewind(){
+        $this->key = 0;
+        if ($this->statement->execute()) {
+            $this->value = $this->statement->fetch();
+        } else {
+            throw new \PDOException('Error executing SQL statement code number'
+                . $this->statement->errorCode();
+            );
+        }
+    }
+```
+
+Which one to use depends mostly of the developer and how the View handles the exceptions.
+
+### Valid method
+
+This method returns boolean and will be the one to be validated by the foreach.
+
+```PHP
+    public function valid(){
+        return (bool) $this->value;
+    }
+```
+
+The statement were fetched, the result stored and checked.
+
+### Current method
+
+The result of this method will be stored in the `$value` variable on the `foreach` statement.
+
+```PHP
+    public function current(){
+        return $this->value;
+    }
+```
+
+### Key method
+
+The result of this method will be stored in the `$key` variable on the `foreach` statement.
+
+```PHP
+    public function key(){
+        return $this->key;
+    }
+```
+
+### Next method
+
+This method will be called everytime the `foreach` method advance to the next iteration.
+
+```PHP
+    public function next(){
+        $this->key++;
+        $this->value = $this->statement->fetch();
+    }
+```
+
+### PDOStatment methods
+
+At this point we have developed a functional class that fully implements the iterator. Now lets focus on creating an interface for the PDOStatement
