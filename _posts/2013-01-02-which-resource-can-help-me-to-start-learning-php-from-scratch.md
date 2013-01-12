@@ -1,5 +1,5 @@
 ---
-title: Resource To Start PHP From Scratch
+slug: which_resources_can_help_me_to_start_learning_php_from_scratch
 anchor: Resource To Start PHP From Scratch A
 isChild: true
 ---
