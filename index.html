@@ -28,7 +28,12 @@
         </ul>
     </header>
     <section>
-        {{ content }}
+        {% for post in site.posts reversed %}
+        {% if post.isChild != true and loop.first != true %}
+        {{ backtotop|markdownify }}
+        {% endif %}
+        {{ post.content }}
+        {% endfor %}
     </section>
     <footer>
         <p>This project is maintained by <a href="https://github.com/shahariaazam">shahariaazam</a></p>
