@@ -1,4 +1,5 @@
 ---
 anchor: Frameworks
+slug: frameworks
 ---
-## FRAMEWORKS {frameworks}
+## FRAMEWORKS

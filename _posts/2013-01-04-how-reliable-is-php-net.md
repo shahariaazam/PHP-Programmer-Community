@@ -1,9 +1,10 @@
 ---
 anchor: Reliability of Php.net
+slug: how_reliable_is_phpnet
 isChild: true
 ---
 
-## How reliable is _php.net_? {reliability_of_phpnet}
+## How reliable is _php.net_?
 
 Php is maybe the most documented programming language in the world. **Php.net is the best resource to understand how php the default php functionality**. Still php MUST NOT be used as your only learning resource for various reasons.
 

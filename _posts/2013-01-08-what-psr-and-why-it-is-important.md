@@ -1,5 +1,6 @@
 ---
 anchor: What is PSR and Why it is essential
+slug: what-psr-and-why-it-is-important
 isChild: true
 ---
 ## What is PSR and why is it important?
