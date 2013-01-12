@@ -21,14 +21,14 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="brand" href="./index.html">PHP Community FAQ</a>
+            <a class="brand" href="http://shahariaazam.github.com/PHP-Programmer-Community">PHP Community FAQ</a>
             <div class="nav-collapse collapse">
                 <ul class="nav">
                     <li class="">
                         <a href="http://shahariaazam.github.com/PHP-Programmer-Community/">Home</a>
                     </li>
                     <li class="active">
-                        <a href="index.html">All Faqs</a>
+                        <a href="http://shahariaazam.github.com/PHP-Programmer-Community">All Faqs</a>
                     </li>
                     <li class="">
                         <a href="#">About Us</a>
@@ -61,7 +61,7 @@
                     <li><a href="#{{ post.slug | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.anchor }}</a>
                         {% assign lastIsChild = post.isChild %}
                         {% endfor %}
-                    <li><a href="#GlobalFooter">Info</a></li>
+                    <li><a href="#credits">Credits</a></li>
                 </ul>
             </div>
 
@@ -81,16 +81,23 @@
 </div>
 <footer class="footer" id="GlobalFooter">
     <div class="container">
-        <p>This Open FAQ page has been developed to enrich the knowledge of PHP Programmers and to let them towards the right ways with PHP.</p>
-        <p>This FAQ Page is a community project which is being developed by few community members of <a href="https://plus.google.com/u/0/communities/104245651975268426012">PHP Programmers</a> in Google+ community</p>
-        <p>Everybody are requested to contribute for developing this FAQ pages which will be more essential to PHP Programmers.</p>
-        <ul class="footer-links">
-            <li><a href="https://plus.google.com/u/0/communities/104245651975268426012">Google+ Community For PHP Programmers</a></li>
-            <li class="muted">·</li>
-            <li><a href="https://github.com/Faryshta/PHP-Programmer-Community/issues">Issues</a></li>
-            <li class="muted">·</li>
-            <li><a href="https://github.com/Faryshta/PHP-Programmer-Community/wiki">Roadmap and changelog</a></li>
+        <h2 class="epsilon">Created by</h2>
+        <ul>
+            <li><a href="https://github.com/Faryshta">Faryshta Mextly</a></li>
         </ul>
+
+        <h2 class="epsilon">Project Contributors</h2>
+        <ul>
+            <li><a href="https://github.com/oaass">Ole Aass</a></li>
+            <li><a href="http://www.shahariaazam.com">Shaharia Azam</a></li>
+        </ul>
+
+        <h2 class="epsilon">Project Credits</h2>
+        <div id="contributors"><p>This project would not be possible without the help of <a href="https://github.com/Faryshta/PHP-Programmer-Community/graphs">our amazing contributors</a> on GitHub.</p></div>
+
+        <p>
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-nc-sa/3.0/88x31.png"></a><br><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/Text" property="dct:title" rel="dct:type">PHP Programmers Community FAQ</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.twitter.com/codeguy" property="cc:attributionName" rel="cc:attributionURL">Faryshta Mextly</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/3.0/">Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported License</a>.
+        </p>
     </div>
 </footer>
 </body>
