@@ -52,16 +52,19 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span4 site-navigation">
+            Last Updated: {{ site.time }}
             <h3>Navigate FAQs</h3>
             <hr>
             <ul>
-                <li>
-                    Welcome
-                    <ul>
-                        <li>Thanks</li>
-                    </ul>
-                </li>
-                <li>Installing PHP</li>
+                <li><a href="/#site-header">Welcome</a></li>
+                {% assign lastIsChild = false %}
+                {% for post in site.posts reversed %}
+                {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
+                {% if lastIsChild and post.isChild != true %}</ul>{% endif %}
+                <li><a href="/#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
+                    {% assign lastIsChild = post.isChild %}
+                    {% endfor %}
+                <li><a href="/#GlobalFooter">Info</a></li>
             </ul>
         </div>
         <div class="span8">
@@ -73,115 +76,11 @@
                 <small>Developed by: <a href="https://plus.google.com/u/0/communities/104245651975268426012">G+ Community</a></small>
                 <br><br>
             </center>
-            <div class="well well-small">
-                <h2 id="i_have_many_years_of_experience_using_php_and_i_want_to_get_ahead_of_the_new_technologies_which_resources_can_help_me_on_that">I have many years of experience using PHP and I want to get ahead of the new technologies. Which resources can help me on that?</h2>
-
-                <ul>
-                    <li>http://net.tutsplus.com/category/tutorials/php/</li>
-
-                    <li>http://www.phptherightway.com/</li>
-                </ul>
-            </div>
-
-            <div class="well well-small">
-                <h2 id="how_reliable_is_phpnet">How reliable is <em>php.net</em>?</h2>
-
-                <p>Php is maybe the most documented programming language in the world. <strong>Php.net is the best resource to understand how php the default php functionality</strong>. Still php MUST NOT be used as your only learning resource for various reasons.</p>
-
-                <p>Sometimes the default functionality is not the best and there are many php tricks to try that can work better. They are usually noted in the coments but the comments themselves are not a reliable source of learning.</p>
-
-                <p>As of any documentation, php.net lacks some documents and have others outdated. They are a minority but its always a good idea to cross references with other documents.</p>
-
-                <p>Php.net focus on explaining the way the language works and it expressively avoids important topics such as dessign patterns, code documentation, version management, best practices etc.</p>
-
-                <p>In resume use php.net as your main resource but not as your only resource.</p>
-            </div>
-
-            <div class="well well-small">
-                <h2 id="i_would_like_to_contribute_to_opensource_projects_where_do_i_start">I would like to contribute to opensource projects, where do I start?</h2>
-
-                <p>First of all you have to go to your chosen project’s homepage and found their GIT repo. Then fork it. You can get started by taking a look at http://www.github.com . You will found lots of open source projects there. Just click on there and start Fork-ing.</p>
-            </div>
-
-            <div class="well well-small">
-                <h2 id="which_resources_can_help_me_to_start_learning_oop_php_object_oriented_php">Which resources can help me to start learning OOP PHP (Object Oriented PHP)</h2>
-
-                <ul>
-                    <li>http://php.net/manual/en/language.oop5.php</li>
-
-                    <li>http://net.tutsplus.com/tutorials/php/oop-in-php</li>
-                </ul>
-            </div>
-
-            <div class="well well-small">
-                <h2 id="what_is_psr_and_why_is_it_important">What is PSR and why is it important?</h2>
-
-                <p>PSR is a proposed standard for coding intended for PHP developers. You can find it here https://github.com/php-fig/fig-standards/tree/master/accepted</p>
-
-                <h3 id="the_problems">The problems</h3>
-
-                <h4 id="its_hard_to_work_with_several_people_and_tools">Its hard to work with several people and tools</h4>
-
-                <p>Something as simple as the tabulation can become a headache very quickly. Each developer have their own way of writting code, where to store files and the style of naming classes, functions and methods.</p>
-
-                <h4 id="interoperatibility">Interoperatibility</h4>
-
-                <p>Packages in PHP and any other language can have problems on how to operate together. For example two different packages can define the same function named “user_sort”, the same class “User” or the same file “User.php”. The folder structure of each package might be different making it hard to make them work together.</p>
-
-                <p>If you have worked with frameworks you will know how hard it is to create and maintain extensions and almost impossible to want the same code work in more than one of them.</p>
-
-                <h4 id="internal_structure">Internal Structure</h4>
-
-                <p>PHP is a very permissive language which means you can do many things that other languages forbid. One example is declaring various classes in the same file. This give advantages but its easy to forget where you declared each class. That can eman trouble when you want to maintain your code or more people want to contribute with you.</p>
-
-                <p>If you want to use autoload functions then you need to figure out your file and folder structure before starting your project and decide it with the rest of your team or it simply will fail to work properly.1</p>
-
-                <h4 id="project_communication">Project communication</h4>
-
-                <p>Each one of this problems above needs to be solved with your team everytime you start a project or want to help with an existing one.</p>
-
-                <h3 id="the_solution">The solution</h3>
-
-                <p>Propose an standard that solve all the problems above by setting a coding style guide that helps people and projects work with each other.</p>
-
-                <p>There is not a coding style better han other one and not a single person knows which can suit better for everyone else. So a commite were created with volunteers that are very well versed in the PHP language to vote and decide how to make this possible.</p>
-
-                <p>Making a project PSR compliant help to make it easier to operate with other projects, that developers can help you better and to keep an organized structure in your code.</p>
-            </div>
-
-            <div class="well well-small">
-                <h2 id="which_is_the_best_framework_or_better_said_why_i_must_not_ask_that_question">Which is the best framework (or better said why I must not ask that question)</h2>
-
-                <p>It depends on the work you want to accomplish. There are lots of PHP Framework around the web. Just read http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks#PHP_2 and think what should be fit for your project. Choosing framework is totally dependent on your project types. So you know better what fits for you.</p>
-            </div>
-
-            <div class="well well-small">
-                <h2 id="which_resources_are_considered_dangerous_or_outdated_and_must_not_be_consulted_or_recommended">Which resources are considered dangerous or outdated and MUST NOT be consulted or recommended.</h2>
-
-                <ul>
-                    <li>w3schools.com explanation w3fools.com</li>
-
-                    <li>http://thephpbasics.com/</li>
-
-                    <li>Any resource that recommend deprecated features such as the <code>mysql_</code> functions to connect a database.</li>
-                </ul>
-            </div>
-
-            <div class="well well-small">
-                <h2 id="which_resources_can_help_me_to_start_learning_php_from_scratch">Which resources can help me to start learning PHP from scratch?</h2>
-
-                <ul>
-                    <li>http://php.net/manual/en/language.basic-syntax.php</li>
-
-                    <li>http://php.net/manual/en/tutorial.php</li>
-
-                    <li>http://it-ebooks.info/tag/php/</li>
-                </ul>
-            </div>
+            {{content}}
         </div>
     </div>
 </div>
-<footer class="footer">
+<footer class="footer" id="GlobalFooter">
     <div class="container">
         <p>This Open FAQ page has been developed to enrich the knowledge of PHP Programmers and to let them towards the right ways with PHP.</p>
         <p>This FAQ Page is a community project which is being developed by few community members of <a href="https://plus.google.com/u/0/communities/104245651975268426012">PHP Programmers</a> in Google+ community</p>
