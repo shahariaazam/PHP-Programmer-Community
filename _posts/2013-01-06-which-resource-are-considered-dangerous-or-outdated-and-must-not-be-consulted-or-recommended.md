@@ -1,5 +1,5 @@
 ---
-title: Outdated Resource
+anchor: Outdated Resource
 isChild: true
 ---
 

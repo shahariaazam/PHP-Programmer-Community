@@ -1,5 +1,5 @@
 ---
-title: Resource for OOP PHP
+anchor: Resource for OOP PHP
 isChild: true
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: How to contribute in Open Source
+anchor: How to contribute in Open Source
 isChild: true
 ---
 
