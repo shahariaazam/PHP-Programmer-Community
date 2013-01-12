@@ -1,5 +1,5 @@
 ---
-title: Resources
+anchor: Resources
 slug: resources
 ---
 ## Resources
