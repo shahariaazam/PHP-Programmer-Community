@@ -1,5 +1,6 @@
 ---
 title: Resource To Start PHP From Scratch
+anchor: Resource To Start PHP From Scratch A
 isChild: true
 ---
 
