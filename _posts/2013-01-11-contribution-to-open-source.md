@@ -1,5 +1,5 @@
 ---
 anchor: Contribute to open source project
-slug: contribution-to-open-source
+slug: how_to_contribute_to_open_source_projects
 ---
 ## How to Contribute to Open Source Projects

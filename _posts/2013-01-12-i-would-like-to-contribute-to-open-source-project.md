@@ -1,6 +1,6 @@
 ---
 anchor: How to contribute in Open Source
-slug: i-would-like-to-contribute-to-open-source-project
+slug: i_would_like_to_contribute_to_opensource_projects_where_do_i_start
 isChild: true
 ---
 

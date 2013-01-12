@@ -1,6 +1,6 @@
 ---
 anchor: Outdated Resource
-slug: which-resource-are-considered-dangerous-or-outdated-and-must-not-be-consulted-or-recommended
+slug: which_resources_are_considered_dangerous_or_outdated_and_must_not_be_consulted_or_recommended
 isChild: true
 ---
 

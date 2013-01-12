@@ -1,6 +1,6 @@
 ---
 anchor: Best Framework
-slug: which-is-the-best-framework-in-php
+slug: which_is_the_best_framework_or_better_said_why_i_must_not_ask_that_question
 isChild: true
 ---
 
