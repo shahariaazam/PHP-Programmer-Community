@@ -1,3 +1,7 @@
+---
+title: Reliability of Php.net
+isChild: true
+---
 
 ## How reliable is _php.net_?
 
