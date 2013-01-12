@@ -1,40 +1,199 @@
-<!doctype html>
 <html>
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Php-programmer-community by shahariaazam</title>
 
-    <link rel="stylesheet" href="stylesheets/styles.css">
-    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
     <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
+    <style type="text/css">
+        body{
+            margin-top: 40px;
+        }
+    </style>
 </head>
 <body>
-<div class="wrapper">
-    <header>
-        <h1>Php-programmer-community</h1>
-        <p>This repo includes resources, links and all the important post from the PHP Programmers Community on Google Plus</p>
-
-        <p class="view"><a href="https://github.com/shahariaazam/PHP-Programmer-Community">View the Project on GitHub <small>shahariaazam/PHP-Programmer-Community</small></a></p>
-
-
-        <ul>
-            <li><a href="https://github.com/shahariaazam/PHP-Programmer-Community/zipball/master">Download <strong>ZIP File</strong></a></li>
-            <li><a href="https://github.com/shahariaazam/PHP-Programmer-Community/tarball/master">Download <strong>TAR Ball</strong></a></li>
-            <li><a href="https://github.com/shahariaazam/PHP-Programmer-Community">View On <strong>GitHub</strong></a></li>
-        </ul>
-    </header>
-    <section>
-        {{ content }}
-    </section>
-    <footer>
-        <p>This project is maintained by <a href="https://github.com/shahariaazam">shahariaazam</a></p>
-    </footer>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="brand" href="./index.html">PHP Community FAQ</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="">
+                        <a href="http://shahariaazam.github.com/PHP-Programmer-Community/">Home</a>
+                    </li>
+                    <li class="active">
+                        <a href="index.html">All Faqs</a>
+                    </li>
+                    <li class="">
+                        <a href="#">About Us</a>
+                    </li>
+                    <li class="">
+                        <a href="#">How to Contribute</a>
+                    </li>
+                    <li class="">
+                        <a href="https://plus.google.com/u/0/communities/104245651975268426012">Meet Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
 </div>
-<script src="javascripts/scale.fix.js"></script>
+<div class="container-fluid">
+    <div class="row-fluid">
+        <div class="span4 site-navigation">
+            <h3>Navigate FAQs</h3>
+            <hr>
+            <ul>
+                <li>
+                    Welcome
+                    <ul>
+                        <li>Thanks</li>
+                    </ul>
+                </li>
+                <li>Installing PHP</li>
+            </ul>
+        </div>
+        <div class="span8">
+            <a class="fork-us" href="https://github.com/shahariaazam/PHP-Programmer-Community">
+                <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
+            </a>
+            <center>
+                <h1>Open FAQ<br>for PHP Programmers</h1>
+                <small>Developed by: <a href="https://plus.google.com/u/0/communities/104245651975268426012">G+ Community</a></small>
+                <br><br>
+            </center>
+            <div class="well well-small">
+                <h2 id="i_have_many_years_of_experience_using_php_and_i_want_to_get_ahead_of_the_new_technologies_which_resources_can_help_me_on_that">I have many years of experience using PHP and I want to get ahead of the new technologies. Which resources can help me on that?</h2>
 
+                <ul>
+                    <li>http://net.tutsplus.com/category/tutorials/php/</li>
+
+                    <li>http://www.phptherightway.com/</li>
+                </ul>
+            </div>
+
+            <div class="well well-small">
+                <h2 id="how_reliable_is_phpnet">How reliable is <em>php.net</em>?</h2>
+
+                <p>Php is maybe the most documented programming language in the world. <strong>Php.net is the best resource to understand how php the default php functionality</strong>. Still php MUST NOT be used as your only learning resource for various reasons.</p>
+
+                <p>Sometimes the default functionality is not the best and there are many php tricks to try that can work better. They are usually noted in the coments but the comments themselves are not a reliable source of learning.</p>
+
+                <p>As of any documentation, php.net lacks some documents and have others outdated. They are a minority but its always a good idea to cross references with other documents.</p>
+
+                <p>Php.net focus on explaining the way the language works and it expressively avoids important topics such as dessign patterns, code documentation, version management, best practices etc.</p>
+
+                <p>In resume use php.net as your main resource but not as your only resource.</p>
+            </div>
+
+            <div class="well well-small">
+                <h2 id="i_would_like_to_contribute_to_opensource_projects_where_do_i_start">I would like to contribute to opensource projects, where do I start?</h2>
+
+                <p>First of all you have to go to your chosen project’s homepage and found their GIT repo. Then fork it. You can get started by taking a look at http://www.github.com . You will found lots of open source projects there. Just click on there and start Fork-ing.</p>
+            </div>
+
+            <div class="well well-small">
+                <h2 id="which_resources_can_help_me_to_start_learning_oop_php_object_oriented_php">Which resources can help me to start learning OOP PHP (Object Oriented PHP)</h2>
+
+                <ul>
+                    <li>http://php.net/manual/en/language.oop5.php</li>
+
+                    <li>http://net.tutsplus.com/tutorials/php/oop-in-php</li>
+                </ul>
+            </div>
+
+            <div class="well well-small">
+                <h2 id="what_is_psr_and_why_is_it_important">What is PSR and why is it important?</h2>
+
+                <p>PSR is a proposed standard for coding intended for PHP developers. You can find it here https://github.com/php-fig/fig-standards/tree/master/accepted</p>
+
+                <h3 id="the_problems">The problems</h3>
+
+                <h4 id="its_hard_to_work_with_several_people_and_tools">Its hard to work with several people and tools</h4>
+
+                <p>Something as simple as the tabulation can become a headache very quickly. Each developer have their own way of writting code, where to store files and the style of naming classes, functions and methods.</p>
+
+                <h4 id="interoperatibility">Interoperatibility</h4>
+
+                <p>Packages in PHP and any other language can have problems on how to operate together. For example two different packages can define the same function named “user_sort”, the same class “User” or the same file “User.php”. The folder structure of each package might be different making it hard to make them work together.</p>
+
+                <p>If you have worked with frameworks you will know how hard it is to create and maintain extensions and almost impossible to want the same code work in more than one of them.</p>
+
+                <h4 id="internal_structure">Internal Structure</h4>
+
+                <p>PHP is a very permissive language which means you can do many things that other languages forbid. One example is declaring various classes in the same file. This give advantages but its easy to forget where you declared each class. That can eman trouble when you want to maintain your code or more people want to contribute with you.</p>
+
+                <p>If you want to use autoload functions then you need to figure out your file and folder structure before starting your project and decide it with the rest of your team or it simply will fail to work properly.1</p>
+
+                <h4 id="project_communication">Project communication</h4>
+
+                <p>Each one of this problems above needs to be solved with your team everytime you start a project or want to help with an existing one.</p>
+
+                <h3 id="the_solution">The solution</h3>
+
+                <p>Propose an standard that solve all the problems above by setting a coding style guide that helps people and projects work with each other.</p>
+
+                <p>There is not a coding style better han other one and not a single person knows which can suit better for everyone else. So a commite were created with volunteers that are very well versed in the PHP language to vote and decide how to make this possible.</p>
+
+                <p>Making a project PSR compliant help to make it easier to operate with other projects, that developers can help you better and to keep an organized structure in your code.</p>
+            </div>
+
+            <div class="well well-small">
+                <h2 id="which_is_the_best_framework_or_better_said_why_i_must_not_ask_that_question">Which is the best framework (or better said why I must not ask that question)</h2>
+
+                <p>It depends on the work you want to accomplish. There are lots of PHP Framework around the web. Just read http://en.wikipedia.org/wiki/Comparison_of_web_application_frameworks#PHP_2 and think what should be fit for your project. Choosing framework is totally dependent on your project types. So you know better what fits for you.</p>
+            </div>
+
+            <div class="well well-small">
+                <h2 id="which_resources_are_considered_dangerous_or_outdated_and_must_not_be_consulted_or_recommended">Which resources are considered dangerous or outdated and MUST NOT be consulted or recommended.</h2>
+
+                <ul>
+                    <li>w3schools.com explanation w3fools.com</li>
+
+                    <li>http://thephpbasics.com/</li>
+
+                    <li>Any resource that recommend deprecated features such as the <code>mysql_</code> functions to connect a database.</li>
+                </ul>
+            </div>
+
+            <div class="well well-small">
+                <h2 id="which_resources_can_help_me_to_start_learning_php_from_scratch">Which resources can help me to start learning PHP from scratch?</h2>
+
+                <ul>
+                    <li>http://php.net/manual/en/language.basic-syntax.php</li>
+
+                    <li>http://php.net/manual/en/tutorial.php</li>
+
+                    <li>http://it-ebooks.info/tag/php/</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <p>This Open FAQ page has been developed to enrich the knowledge of PHP Programmers and to let them towards the right ways with PHP.</p>
+        <p>This FAQ Page is a community project which is being developed by few community members of <a href="https://plus.google.com/u/0/communities/104245651975268426012">PHP Programmers</a> in Google+ community</p>
+        <p>Everybody are requested to contribute for developing this FAQ pages which will be more essential to PHP Programmers.</p>
+        <ul class="footer-links">
+            <li><a href="https://plus.google.com/u/0/communities/104245651975268426012">Google+ Community For PHP Programmers</a></li>
+            <li class="muted">·</li>
+            <li><a href="https://github.com/Faryshta/PHP-Programmer-Community/issues">Issues</a></li>
+            <li class="muted">·</li>
+            <li><a href="https://github.com/Faryshta/PHP-Programmer-Community/wiki">Roadmap and changelog</a></li>
+        </ul>
+    </div>
+</footer>
 </body>
 </html>
