@@ -1,5 +1,4 @@
 auto: true
 safe: true
-server: true
-server_port: 4000
-baseurl: /
+server: false
+baseurl: http://shahariaazam.github.com/PHP-Programmer-Community
