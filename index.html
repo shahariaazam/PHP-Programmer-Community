@@ -1,99 +1,10 @@
-<html>
-<head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <title>Php-programmer-community by shahariaazam</title>
+---
+layout: default
+description: "An easy-to-read, quick reference for PHP best practices, accepted coding standards, and links to authoritative PHP tutorials around the Web"
+---
 
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
-    <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
-    <!--[if lt IE 9]>
-    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
-    <link href='http://fonts.googleapis.com/css?family=Dosis' rel='stylesheet' type='text/css'>
-    <style type="text/css">
-        body{
-            margin-top: 40px;
-        }
-    </style>
-</head>
-<body>
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="navbar-inner">
-        <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="brand" href="./index.html">PHP Community FAQ</a>
-            <div class="nav-collapse collapse">
-                <ul class="nav">
-                    <li class="">
-                        <a href="http://shahariaazam.github.com/PHP-Programmer-Community/">Home</a>
-                    </li>
-                    <li class="active">
-                        <a href="index.html">All Faqs</a>
-                    </li>
-                    <li class="">
-                        <a href="#">About Us</a>
-                    </li>
-                    <li class="">
-                        <a href="#">How to Contribute</a>
-                    </li>
-                    <li class="">
-                        <a href="https://plus.google.com/u/0/communities/104245651975268426012">Meet Us</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
+{% for post in site.posts reversed %}
+<div id="well well-small">
+    {{ post.content }}
 </div>
-<div class="container-fluid">
-    <div class="row-fluid">
-        <div class="span4 site-navigation">
-            <h3>Navigate FAQs</h3>
-            <hr>
-            <ul>
-                <li>
-                    Welcome
-                    <ul>
-                        <li>Thanks</li>
-                    </ul>
-                </li>
-                <li>Installing PHP</li>
-            </ul>
-        </div>
-        <div class="span8">
-            <a class="fork-us" href="https://github.com/shahariaazam/PHP-Programmer-Community">
-                <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
-            </a>
-            <center>
-                <h1>Open FAQ<br>for PHP Programmers</h1>
-                <small>Developed by: <a href="https://plus.google.com/u/0/communities/104245651975268426012">G+ Community</a></small>
-                <br><br>
-            </center>
-            {% for post in site.posts reversed %}
-            <div class="well well-small">
-                {{ post.content }}
-            </div>
-            {% endfor %}
-        </div>
-    </div>
-</div>
-<footer class="footer">
-    <div class="container">
-        <p>This Open FAQ page has been developed to enrich the knowledge of PHP Programmers and to let them towards the right ways with PHP.</p>
-        <p>This FAQ Page is a community project which is being developed by few community members of <a href="https://plus.google.com/u/0/communities/104245651975268426012">PHP Programmers</a> in Google+ community</p>
-        <p>Everybody are requested to contribute for developing this FAQ pages which will be more essential to PHP Programmers.</p>
-        <ul class="footer-links">
-            <li><a href="https://plus.google.com/u/0/communities/104245651975268426012">Google+ Community For PHP Programmers</a></li>
-            <li class="muted">·</li>
-            <li><a href="https://github.com/Faryshta/PHP-Programmer-Community/issues">Issues</a></li>
-            <li class="muted">·</li>
-            <li><a href="https://github.com/Faryshta/PHP-Programmer-Community/wiki">Roadmap and changelog</a></li>
-        </ul>
-    </div>
-</footer>
-</body>
-</html>
+{% endfor %}
