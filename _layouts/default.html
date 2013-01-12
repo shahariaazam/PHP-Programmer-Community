@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
     <title>Php-programmer-community by shahariaazam</title>
 
-    <link rel="stylesheet" href="assets/css/bootstrap.css">
+    <link rel="stylesheet" href="../assets/css/bootstrap.css">
     <link rel="stylesheet" href="assets/css/bootstrap-responsive.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <!--[if lt IE 9]>
@@ -46,22 +46,25 @@
 </div>
 <div class="container-fluid">
     <div class="row-fluid">
-        <div class="span4 site-navigation">
-            <br><br>
-            Last Updated: {{ site.time }}
-            <h3>Navigate FAQs</h3>
-            <hr>
-            <ul>
-                <li><a href="/#site-header">Welcome</a></li>
-                {% assign lastIsChild = false %}
-                {% for post in site.posts reversed %}
-                {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
-                {% if lastIsChild and post.isChild != true %}</ul>{% endif %}
-                <li><a href="#{{ post.slug | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.anchor }}</a>
-                    {% assign lastIsChild = post.isChild %}
-                    {% endfor %}
-                <li><a href="#GlobalFooter">Info</a></li>
-            </ul>
+        <div class="span4">
+            <div class="site-navigation">
+                <br><br>
+                Last Updated: {{ site.time }}
+                <h3>Navigate FAQs</h3>
+                <hr>
+                <ul>
+                    <li><a href="/#site-header">Welcome</a></li>
+                    {% assign lastIsChild = false %}
+                    {% for post in site.posts reversed %}
+                    {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
+                    {% if lastIsChild and post.isChild != true %}</ul>{% endif %}
+                    <li><a href="#{{ post.slug | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.anchor }}</a>
+                        {% assign lastIsChild = post.isChild %}
+                        {% endfor %}
+                    <li><a href="#GlobalFooter">Info</a></li>
+                </ul>
+            </div>
+
         </div>
         <div class="span8">
             <a class="fork-us" href="https://github.com/shahariaazam/PHP-Programmer-Community">

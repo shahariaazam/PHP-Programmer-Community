@@ -6038,6 +6038,10 @@ a.badge:hover {
   position: fixed;
 }
 /*Our Custom CSS*/
+.site-navigation{
+    position: fixed;
+    overflow: auto;
+}
 .site-navigation ul {
     margin-top: 0px !important;
     margin-right: 0px !important;
