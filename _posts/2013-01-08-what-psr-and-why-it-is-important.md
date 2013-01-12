@@ -2,9 +2,8 @@
 title: What is PSR and Why it is essential
 isChild: true
 ---
-
 ## What is PSR and why is it important?
-
+{what-is-psr-and-why-it-is-essential}
 PSR is a proposed standard for coding intended for PHP developers. You can find it here https://github.com/php-fig/fig-standards/tree/master/accepted
 
 ### The problems

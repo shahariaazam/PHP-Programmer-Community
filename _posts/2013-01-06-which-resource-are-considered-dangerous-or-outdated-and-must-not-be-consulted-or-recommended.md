@@ -3,7 +3,7 @@ title: Outdated Resource
 isChild: true
 ---
 
-## Which resources are considered dangerous or outdated and MUST NOT be consulted or recommended.
+## Which resources are considered dangerous or outdated and MUST NOT be consulted or recommended. {outdated_resource}
 
 * w3schools.com explanation w3fools.com
 * http://thephpbasics.com/
