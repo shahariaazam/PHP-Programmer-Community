@@ -61,7 +61,7 @@
                     <li><a href="#{{ post.slug | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.anchor }}</a>
                         {% assign lastIsChild = post.isChild %}
                         {% endfor %}
-                    <li><a href="#contributors">Contributors</a></li>
+                    <ul><li><a href="#contributors">Contributors</a></li></ul>
                 </ul>
             </div>
 
