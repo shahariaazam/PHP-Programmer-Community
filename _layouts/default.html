@@ -52,6 +52,7 @@
 <div class="container-fluid">
     <div class="row-fluid">
         <div class="span4 site-navigation">
+            <br><br>
             Last Updated: {{ site.time }}
             <h3>Navigate FAQs</h3>
             <hr>
@@ -61,13 +62,13 @@
                 {% for post in site.posts reversed %}
                 {% if post.isChild and lastIsChild != true %}<ul>{% endif %}
                 {% if lastIsChild and post.isChild != true %}</ul>{% endif %}
-                <li><a href="#{{ post.title | downcase | replace:' ','_' | replace:'(','' | replace:')','' | replace:'.','' | replace:'-','' }}">{{ post.title }}</a>
+                <li><a href="#{{ post.title }}">{{ post.title }}</a>
                     {% assign lastIsChild = post.isChild %}
                     {% endfor %}
                 <li><a href="#GlobalFooter">Info</a></li>
             </ul>
         </div>
-        <div class="span8">
+        <div class="span8" id="site-header">
             <a class="fork-us" href="https://github.com/shahariaazam/PHP-Programmer-Community">
                 <img src="https://s3.amazonaws.com/github/ribbons/forkme_right_darkblue_121621.png" alt="Fork me on GitHub">
             </a>
